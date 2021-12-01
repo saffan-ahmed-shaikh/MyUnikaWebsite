@@ -669,7 +669,7 @@
                 </div>
             </div>
         </section>
-        <section id="section" class="social-section">
+        <section id="social-section" class="social-section">
             <div class="container">
                 <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
                     <h2>Join Us</h2>
@@ -762,7 +762,7 @@
                 </div>
             </div>
         </section>
-        <footer class="text-off-white">
+        <footer class="text-off-white" id="footer">
             <div class="footer-top">
                 <div class="container">
                     <div class="row bounceInLeft wow animated" data-wow-delay="0.4s">
@@ -938,6 +938,49 @@
             } else {
                 document.getElementById("backtotop").classList.remove("visible");
             }
+        }
+        // Basice Code keep it 
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+
+            //smoothscroll
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+
+                var target = this.hash,
+                    menu = target;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top + 2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+
+        // Use Your Class or ID For Selection 
+
+        function onScroll(event) {
+            var scrollPos = $(document).scrollTop();
+            $('.navbar-nav .nav-item a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() +
+                    600 >
+                    scrollPos) {
+                    $('.navbar-nav .nav-item a').removeClass("active1");
+                    currLink.addClass("active1");
+                } else {
+                    currLink.removeClass("active1");
+                }
+            });
         }
     </script>
 </body>

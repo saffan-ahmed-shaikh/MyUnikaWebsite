@@ -142,6 +142,11 @@ body,
     box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
 }
 
+.active1 {
+    box-shadow: inset 0 3px #fff !important;
+    color: white !important;
+}
+
 .navbar {
     margin: 0;
     padding: 0;
@@ -149,9 +154,8 @@ body,
 
 .navbar-nav .nav-link {
     color: #a9a9a9;
-    padding: 24px 0;
+    padding: 25px 0;
     margin-left: 25px;
-    padding: 0 !important;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
