@@ -973,8 +973,7 @@
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
                 if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() +
-                    600 >
-                    scrollPos) {
+                    1000 > scrollPos) {
                     $('.navbar-nav .nav-item a').removeClass("active1");
                     currLink.addClass("active1");
                 } else {

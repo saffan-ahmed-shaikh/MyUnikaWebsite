@@ -1113,6 +1113,11 @@ ul.imp-links li a {
         font-size: 34px;
     }
 
+    .navbar .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
     #team-section .col-md-2:first-child {
         margin-left: 0 !important;
         clear: none !important;
