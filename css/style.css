@@ -981,14 +981,11 @@ ul.imp-links li a {
 }
 
 .email button {
-    border: 0 none;
-    color: #fff;
-    font-style: normal;
-    font-weight: 300;
-    padding: 7px 20px;
     height: 31px;
-    transition: all 0.4s ease-in;
     background-color: #676D75;
+    padding: 0px 20px;
+    letter-spacing: 0;
+    font-size: inherit;
 }
 
 .email button:hover {
@@ -1036,6 +1033,10 @@ ul.imp-links li a {
     border: 2px solid #676D75;
 }
 
+.mxaxis-3 {
+    margin: 0 1rem;
+}
+
 .scrolltotop:hover {
     color: #676D75;
 }
@@ -1065,6 +1066,10 @@ ul.imp-links li a {
     .team-item .team-triangle {
         width: 90px;
         height: 90px;
+    }
+
+    .mxaxis-3 {
+        margin: 0;
     }
 
     .team-triangle .content {
@@ -1201,5 +1206,10 @@ ul.imp-links li a {
 @media only screen and (max-width: 480px) {
     #team-section .col-md-2 {
         width: 100%;
+    }
+
+    .email button {
+        padding: 0px 20px;
+        margin-bottom: 2px;
     }
 }
