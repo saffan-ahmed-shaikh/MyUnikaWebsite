@@ -311,8 +311,6 @@ body,
 }
 
 .zoomanim {
-    visibility: visible;
-    animation-name: zoomIn;
     margin: 30px 0;
 }
 
