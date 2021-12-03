@@ -849,7 +849,7 @@
                 loop: true,
                 nav: false,
                 responsive: {
-                    100: {
+                    0: {
                         items: 1,
                     },
                     525: {
@@ -881,6 +881,13 @@
                 }
             })
         new WOW().init();
+        wow = new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animated', // default
+            offset: 0, // default
+            mobile: true, // default
+            live: true // default
+        })
         window.onload = document.getElementById("page-loader").style.display = "none";
         document.getElementById("owl-intro-text").addEventListener("mousedown", cursor);
         document.getElementById("owl-intro-text").addEventListener("mouseup", cursor2);
