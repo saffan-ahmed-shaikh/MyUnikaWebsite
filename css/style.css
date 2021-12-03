@@ -169,7 +169,7 @@ body,
 .sec-intro {
     background-image: url(../images/team/slider-bg.jpg);
     position: relative;
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
