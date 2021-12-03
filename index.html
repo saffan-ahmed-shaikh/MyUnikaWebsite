@@ -952,7 +952,7 @@
                     menu = target;
                 $target = $(target);
                 $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top + 2
+                    'scrollTop': $target.offset().top
                 }, 500, 'swing', function () {
                     window.location.hash = target;
                     $(document).on("scroll", onScroll);
@@ -967,7 +967,8 @@
             $('.navbar-nav .nav-item a').each(function () {
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
-                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() +
+                if (refElement.position().top - 30 <= scrollPos && refElement.position().top + refElement
+                    .height() +
                     1000 > scrollPos) {
                     $('.navbar-nav .nav-item a').removeClass("active1");
                     currLink.addClass("active1");
